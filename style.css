@@ -2,15 +2,18 @@ body {
   margin: 0;
   padding: 0;
 }
+.bloc_page {
+  padding: auto;
+  margin: auto;
+}
 .logo {
   width: 20%;
   margin-left: 40%;
   margin-bottom: 50px;
   margin-top: 30px;
 }
-.fa {
-  margin-left: -50px;
-  font-size: 20px;
+.iconeSearch {
+  margin-left: -40px;
 }
 #search {
   background-color: rgba(128, 128, 128, 0.24);
@@ -19,48 +22,79 @@ body {
   width: 90%;
   margin-left: 50px;
   border: none;
-}
-.search {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 #search::placeholder {
   font-size: 20px;
   padding-left: 30px;
   color: gray;
 }
-#search_filtre {
+.search_filtre {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 40%;
-  margin-left: 50px;
-  margin-top: 50px;
+  height: 70px;
+  width: 200px;
+  margin-left: 25px;
 }
-.search_filtre {
-  height: 60px;
-  width: 150px;
+.one_filtre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.btnDown {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: -50px;
+  color: white;
 }
 #ustensils {
-  background-color: red;
+  background-color: #ed6454;
   border: none;
   border-radius: 5px;
 }
 #appareil {
-  background-color: rgba(30, 167, 30, 0.72);
+  background-color: #68d9a4;
   border: none;
   border-radius: 5px;
 }
 #ingredients {
-  background-color: rgba(0, 60, 255, 0.837);
+  background-color: #3381f7;
   border-radius: 5px;
   border: none;
 }
 ::placeholder {
   color: white;
   font-size: 20px;
-  padding-left: 10px;
+  padding-left: 30px;
 }
-.one_filtre > i {
-  color: white;
-  margin-left: -30px;
+@media all and (min-width: 481px) and (max-width: 1200px) {
+  .search_filtre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .one_filtre {
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-device-width: 480px) {
+  .logo {
+    width: 40%;
+    margin-left: 30%;
+  }
+  #search {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .search_filtre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .one_filtre {
+    margin-bottom: 30px;
+  }
 }

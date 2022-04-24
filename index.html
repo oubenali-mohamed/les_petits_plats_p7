@@ -12,54 +12,76 @@
     <title>Les Petits Plats</title>
   </head>
   <body>
-    <header>
-      <a href="index.html">
-        <img src="/images/logo.png" alt="logo les Petits Plats" class="logo"
-      /></a>
-    </header>
-    <main>
-      <div class="search">
-        <label for="search"></label>
-        <input
-          type="text"
-          id="search"
-          name="search"
-          placeholder="Rechercher une recette"
-        />
-        <i class="fa fa-search"></i>
-      </div>
-      <div id="search_filtre">
-        <div class="one_filtre">
-          <label for="ingredients"></label>
-          <input
-            class="search_filtre"
-            type="text"
-            id="ingredients"
-            placeholder="Ingrédients"
-          />
-          <i class="fas fa-angle-down fa-2x"></i>
+    <div class="bloc_page">
+      <header>
+        <a href="index.html">
+          <img src="/images/logo.png" alt="logo les Petits Plats" class="logo"
+        /></a>
+      </header>
+      <main class="main">
+        <div class="search_bar">
+          <div>
+            <label for="search"></label>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Rechercher une recette"
+            />
+            <i class="fas fa-search iconeSearch"></i>
+          </div>
         </div>
-        <div class="one_filtre">
-          <label for="appareil"></label>
-          <input
-            class="search_filtre"
-            type="text"
-            id="appareil"
-            placeholder="Appareil"
-          />
-          <i class="fas fa-angle-down fa-2x"></i>
+        <div class="search_filtre">
+          <div class="one_filtre">
+            <div>
+              <label for="ingredients"></label>
+              <input
+                class="search_filtre"
+                type="text"
+                id="ingredients"
+                placeholder="Ingredients"
+              />
+            </div>
+            <div>
+              <button class="btnDown">
+                <i class="fas fa-angle-down fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="one_filtre">
+            <div>
+              <label for="appareil"></label>
+              <input
+                class="search_filtre"
+                type="text"
+                id="appareil"
+                placeholder="Appareil"
+              />
+            </div>
+            <div>
+              <button class="btnDown">
+                <i class="fas fa-angle-down fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="one_filtre">
+            <div>
+              <label for="ustensils"></label>
+              <input
+                class="search_filtre"
+                type="text"
+                id="ustensils"
+                placeholder="Ustensils"
+              />
+            </div>
+            <div>
+              <button class="btnDown">
+                <i class="fas fa-angle-down fa-2x"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="one_filtre">
-          <label for="ustensils"></label>
-          <input
-            class="search_filtre"
-            type="text"
-            id="ustensils"
-            placeholder="Ustensils"
-          />
-          <i class="fas fa-angle-down fa-2x"></i>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
