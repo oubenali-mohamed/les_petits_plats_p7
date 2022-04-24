@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/567b043990.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Les Petits Plats</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="/images/logo.png" alt="logo les Petits Plats" class="logo"
+      /></a>
+    </header>
+    <main>
+      <div class="search">
+        <label for="search"></label>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Rechercher une recette"
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div id="search_filtre">
+        <div class="one_filtre">
+          <label for="ingredients"></label>
+          <input
+            class="search_filtre"
+            type="text"
+            id="ingredients"
+            placeholder="Ingrédients"
+          />
+          <i class="fas fa-angle-down fa-2x"></i>
+        </div>
+        <div class="one_filtre">
+          <label for="appareil"></label>
+          <input
+            class="search_filtre"
+            type="text"
+            id="appareil"
+            placeholder="Appareil"
+          />
+          <i class="fas fa-angle-down fa-2x"></i>
+        </div>
+        <div class="one_filtre">
+          <label for="ustensils"></label>
+          <input
+            class="search_filtre"
+            type="text"
+            id="ustensils"
+            placeholder="Ustensils"
+          />
+          <i class="fas fa-angle-down fa-2x"></i>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

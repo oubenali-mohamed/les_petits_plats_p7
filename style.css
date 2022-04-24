@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.fa {
+  margin-left: -50px;
+  font-size: 20px;
+}
+#search {
+  background-color: rgba(128, 128, 128, 0.24);
+  border-radius: 5px;
+  height: 60px;
+  width: 90%;
+  margin-left: 50px;
+  border: none;
+}
+.search {
+  margin-bottom: 30px;
+}
+#search::placeholder {
+  font-size: 20px;
+  padding-left: 30px;
+  color: gray;
+}
+#search_filtre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.search_filtre {
+  height: 60px;
+  width: 150px;
+}
+#ustensils {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+}
+#appareil {
+  background-color: rgba(30, 167, 30, 0.72);
+  border: none;
+  border-radius: 5px;
+}
+#ingredients {
+  background-color: rgba(0, 60, 255, 0.837);
+  border-radius: 5px;
+  border: none;
+}
+::placeholder {
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.one_filtre > i {
+  color: white;
+  margin-left: -30px;
+}
