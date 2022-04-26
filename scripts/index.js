@@ -1,4 +1,4 @@
-let url = "/data/recipes.json";
+let url = "data/recipes.json";
 
 async function displayRecipe() {
   // Penser à remplacer par les données récupérées dans le json
