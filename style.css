@@ -74,10 +74,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 80px;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin: 100px 80px 50px 50px;
   flex-wrap: wrap;
 }
 .img {
@@ -89,8 +86,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #e7e7e7;
-  height: 200px;
+  height: auto;
   border-radius: 0px 0px 5px 5px;
+  padding: 20px;
 }
 .recipe_content {
   width: 30%;
@@ -98,10 +96,17 @@ body {
   border-radius: 5px 5px 0px 0px;
 }
 .detail_recipe {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.all_ingredients {
+  font-size: 15px;
+}
+.the_description {
+  font-size: 15px;
+  margin-left: 60px;
 }
 .title_time {
   display: flex;

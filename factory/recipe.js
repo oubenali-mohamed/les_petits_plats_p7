@@ -43,9 +43,11 @@ class Recipe {
     detail_recipe.className = "detail_recipe";
 
     const ingredient_recipe = document.createElement("div");
+    ingredient_recipe.className = "all_ingredients";
     ingredient_recipe.textContent = this.ingredients;
 
     const desc_recipe = document.createElement("div");
+    desc_recipe.className = "the_description";
     desc_recipe.textContent = this.description;
 
     detail_recipe.appendChild(ingredient_recipe);
