@@ -15,7 +15,7 @@ class Recipe {
     recipeContent.className = "recipe_content";
 
     const imgRecipe = document.createElement("div");
-    imgRecipe.className = "img";
+    imgRecipe.className = "bg_img";
     recipeContent.appendChild(imgRecipe);
 
     const infos_recipe = document.createElement("div");
