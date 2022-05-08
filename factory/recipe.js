@@ -44,12 +44,29 @@ class Recipe {
 
     const ingredient_recipe = document.createElement("div");
     ingredient_recipe.className = "all_ingredients";
-    ingredient_recipe.textContent = this.ingredients;
+    for (let i = 0; i < this.ingredients.length; i++) {
+      console.log(this.ingredients[i]);
+      // const l = this.ingredients[i];
+      const ul_ingredient = document.createElement("ul");
+      const li_ingredient = document.createElement("li");
+      li_ingredient.className = "liIngredient";
+      const quantity_ing = this.ingredients[i].quantity;
+      const ingredient_ing = this.ingredients[i].ingredient;
+      const unit_ing = this.ingredients[i].unit;
+
+      li_ingredient.innerHTML =
+        ingredient_ing + ": " + quantity_ing + " " + unit_ing;
+      ul_ingredient.appendChild(li_ingredient);
+      ingredient_recipe.appendChild(ul_ingredient);
+    }
 
     const desc_recipe = document.createElement("div");
     desc_recipe.className = "the_description";
     desc_recipe.textContent = this.description;
-
+    desc_recipe.addEventListener("click", function (e) {
+      e.preventDefault();
+      desc_recipe.style.whiteSpace = "normal";
+    });
     detail_recipe.appendChild(ingredient_recipe);
     detail_recipe.appendChild(desc_recipe);
 

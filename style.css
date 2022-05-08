@@ -132,12 +132,23 @@ body {
   justify-content: space-between;
 }
 .all_ingredients {
-  font-size: 15px;
+  width: 60%;
+  margin-left: -40px;
+  margin-top: -20px;
 }
-
+.liIngredient {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
 .the_description {
   font-size: 15px;
-  margin-left: 60px;
+  margin-left: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50%;
+  text-overflow: ellipsis;
 }
 .title_time {
   display: flex;
