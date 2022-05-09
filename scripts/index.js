@@ -18,23 +18,35 @@ async function displayRecipe() {
 
         // boucle pour parcourir le tableau des ingrédients
         const all_ingredients = recipe.ingredients;
+        const listIngredient = document.createElement("ul");
+        const list_li_ingredient = document.createElement("li");
+        listIngredient.appendChild(list_li_ingredient);
         for (let i = 0; i < all_ingredients.length; i++) {
           // console.log(all_ingredients);
+          list_li_ingredient.innerHTML = all_ingredients[i].ingredient;
           const allIng = document.querySelector(".allIng");
-          allIng.append(all_ingredients[i].ingredient + " ");
+          allIng.append(listIngredient);
         }
 
         // récupération des données pour les appareils
         const all_appliance = recipe.appliance;
+        const listAppliance = document.createElement("ul");
+        const list_li_appliance = document.createElement("li");
+        list_li_appliance.innerHTML = all_appliance;
+        listAppliance.appendChild(list_li_appliance);
         const allApp = document.querySelector(".allApp");
-        allApp.append(all_appliance + " ");
+        allApp.append(listAppliance);
 
         // récupération des données des ustensiles
         const all_ustensils = recipe.ustensils;
+        const listUstensil = document.createElement("ul");
+        const list_li_ustensil = document.createElement("li");
+        listUstensil.appendChild(list_li_ustensil);
         for (let i = 0; i < all_ustensils.length; i++) {
           // console.log(all_ustensils[i]);
           const allUst = document.querySelector(".allUst");
-          allUst.append(all_ustensils[i] + " ");
+          list_li_ustensil.innerHTML = all_ustensils[i];
+          allUst.append(listUstensil);
         }
       });
     });

@@ -44,10 +44,13 @@ body {
   align-items: center;
   margin-right: 10px;
 }
-.btnDown {
+.one_filtre li {
+  cursor: pointer;
+}
+.chevron {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 30px;
   border: none;
   background: none;
   cursor: pointer;
@@ -57,24 +60,24 @@ body {
   background-color: #ed6454;
   border: none;
   border-radius: 5px;
-  width: 300px;
+  width: 200px;
 }
 #appareil {
   background-color: #68d9a4;
   border: none;
   border-radius: 5px;
-  width: 300px;
+  width: 200px;
 }
 #ingredients {
   background-color: #3381f7;
   border-radius: 5px;
   border: none;
-  width: 300px;
+  width: 200px;
 }
 ::placeholder {
   color: white;
   font-size: 20px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 .all_recipes {
   display: flex;
@@ -83,16 +86,21 @@ body {
   margin: 100px 80px 50px 50px;
   flex-wrap: wrap;
 }
+li {
+  list-style-type: none;
+}
+
 .allIng {
-  width: 300px;
+  width: 200px;
   background-color: #3381f7;
   color: white;
   display: none;
   margin-left: 25px;
   border-radius: 5px;
 }
+
 .allApp {
-  width: 300px;
+  width: 200px;
   background-color: #68d9a4;
   color: white;
   border-radius: 5px;
@@ -100,7 +108,7 @@ body {
   display: none;
 }
 .allUst {
-  width: 300px;
+  width: 200px;
   background-color: #ed6454;
   color: white;
   border-radius: 5px;
@@ -130,6 +138,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.enSavoirPlus {
+  background-color: #e7e7e7;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: auto;
+  font-weight: bold;
+  cursor: pointer;
 }
 .all_ingredients {
   width: 60%;
@@ -168,7 +185,7 @@ body {
 @media all and (min-width: 481px) and (max-width: 1200px) {
   .search_filtre {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
   }
   .one_filtre {
@@ -198,9 +215,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: auto;
   }
   .one_filtre {
     margin-bottom: 30px;
+  }
+  .allApp,
+  .allIng,
+  .allUst {
+    margin-left: 0px;
   }
   .all_recipes {
     width: 100%;

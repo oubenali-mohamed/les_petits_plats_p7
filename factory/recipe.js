@@ -45,8 +45,7 @@ class Recipe {
     const ingredient_recipe = document.createElement("div");
     ingredient_recipe.className = "all_ingredients";
     for (let i = 0; i < this.ingredients.length; i++) {
-      console.log(this.ingredients[i]);
-      // const l = this.ingredients[i];
+      // console.log(this.ingredients[i]);
       const ul_ingredient = document.createElement("ul");
       const li_ingredient = document.createElement("li");
       li_ingredient.className = "liIngredient";
@@ -63,12 +62,16 @@ class Recipe {
     const desc_recipe = document.createElement("div");
     desc_recipe.className = "the_description";
     desc_recipe.textContent = this.description;
-    desc_recipe.addEventListener("click", function (e) {
+    const enSavoirPlus = document.createElement("button");
+    enSavoirPlus.textContent = "Plus...";
+    enSavoirPlus.className = "enSavoirPlus";
+    enSavoirPlus.addEventListener("click", function (e) {
       e.preventDefault();
       desc_recipe.style.whiteSpace = "normal";
     });
     detail_recipe.appendChild(ingredient_recipe);
     detail_recipe.appendChild(desc_recipe);
+    detail_recipe.appendChild(enSavoirPlus);
 
     infos_recipe.appendChild(detail_recipe);
 
