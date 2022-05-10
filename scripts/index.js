@@ -51,7 +51,30 @@ async function displayRecipe() {
       });
     });
 }
+const searchBar = document.querySelector("#search");
+searchBar.addEventListener("keyup", function (e) {
+  const searchLettre = e.target.value;
+  const recipeContent = document.querySelectorAll(".recipe_content");
+  filterRecipe(searchLettre, recipeContent);
+});
 
+function filterRecipe(lettre, element) {
+  if (lettre.length < 3) {
+    const msgRecipe = document.querySelector(".msgRecipe");
+    console.log(msgRecipe);
+    msgRecipe.innerHTML = "Aucune recette ne correspond à votre critère…";
+  } else if (lettre.length > 2) {
+    const msgRecipe = document.querySelector(".msgRecipe");
+    msgRecipe.style.display = "none";
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].textContent.toLowerCase().includes(lettre)) {
+        element[i].style.display = "block";
+      } else {
+        element[i].style.display = "none";
+      }
+    }
+  }
+}
 async function init() {
   displayRecipe();
 }
