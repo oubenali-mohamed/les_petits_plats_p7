@@ -47,7 +47,9 @@ body {
 .one_filtre li {
   cursor: pointer;
 }
-.chevron {
+.chevronIng,
+.chevronApp,
+.chevronUst {
   position: absolute;
   top: 20px;
   right: 30px;
