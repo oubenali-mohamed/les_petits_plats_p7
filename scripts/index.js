@@ -19,71 +19,72 @@ async function displayRecipe() {
     })
     .then((data) => {
       // récupération des données du fichier json
-      // console.log(data.recipes);
       const recipes = data.recipes;
-
-      return recipes.forEach((recipe) => {
-        // console.log(recipe);
+      recipes.forEach((recipe) => {
         const recipeModel = new Recipe(recipe);
         const recipCardDOM = recipeModel.getRecipe();
         all_recipes.appendChild(recipCardDOM);
 
-        // boucle pour parcourir le tableau des ingrédients
         const all_ingredients = recipe.ingredients;
-        const listIngredient = document.createElement("ul");
-        const list_li_ingredient = document.createElement("li");
-        list_li_ingredient.className = "list_ingredient";
-        listIngredient.appendChild(list_li_ingredient);
-
         for (let i = 0; i < all_ingredients.length; i++) {
+          //push des ingredient dans l'array ingredient
           arrayIngredient.push(all_ingredients[i].ingredient);
-          // console.log(arrayIngredient);
-          const arrayFilterIngredient = arrayIngredient.filter(
-            (el, pos) => arrayIngredient.indexOf(el) == pos
-          );
-          // console.log(arrayFilterIngredient);
-          const allIng = document.querySelector(".allIng");
-          list_li_ingredient.innerHTML = all_ingredients[i].ingredient;
-          allIng.append(listIngredient);
         }
-
-        // récupération des données pour les appareils
+        // push des appareils dans l'array appliance
         const all_appliance = recipe.appliance;
         arrayAppliance.push(all_appliance);
-        arrayAppliance.push(all_appliance);
-        const arrayfiltreAppl = arrayAppliance.filter(
-          (el, pos) => arrayAppliance.indexOf(el) == pos
-        );
-        // console.log(arrayfiltreAppl);
-        const listAppliance = document.createElement("ul");
-        const list_li_appliance = document.createElement("li");
-        list_li_appliance.className = "list_appliance";
-        list_li_appliance.innerHTML = all_appliance;
-        listAppliance.appendChild(list_li_appliance);
-        const allApp = document.querySelector(".allApp");
-        allApp.append(listAppliance);
 
-        // récupération des données des ustensiles
         const all_ustensils = recipe.ustensils;
-
-        const listUstensil = document.createElement("ul");
-        const list_li_ustensil = document.createElement("li");
-        list_li_ustensil.className = "list_ustensil";
-        listUstensil.appendChild(list_li_ustensil);
-
         for (let i = 0; i < all_ustensils.length; i++) {
+          // push des ustensils dans l'array ustensiles
           arrayUstensil.push(all_ustensils[i]);
-          // console.log(arrayUstensil);
-          arrayUstensil.push(all_ustensils[i]);
-          const arrayFilterUstensil = arrayUstensil.filter(
-            (el, pos) => arrayUstensil.indexOf(el) == pos
-          );
-          // console.log(arrayFilterUstensil);
-          const allUst = document.querySelector(".allUst");
-          list_li_ustensil.innerHTML = all_ustensils[i];
-          allUst.append(listUstensil);
         }
       });
+
+      // filtre des ingredients
+      const arrayFilterIngredient = arrayIngredient.filter(
+        (el, pos) => arrayIngredient.indexOf(el) == pos
+      );
+
+      // filtre des appareils
+      const arrayFiltreAppliance = arrayAppliance.filter(
+        (el, pos) => arrayAppliance.indexOf(el) == pos
+      );
+
+      // filtre des ustensiles
+      const arrayFiltreUstensil = arrayUstensil.filter(
+        (el, pos) => arrayUstensil.indexOf(el) == pos
+      );
+
+      //ajout des ingredients au DOM
+      const listIngredient = document.createElement("ul");
+      const list_li_ingredient = document.createElement("li");
+      list_li_ingredient.className = "list_ingredient";
+      listIngredient.appendChild(list_li_ingredient);
+      for (let i = 0; i < arrayFilterIngredient.length; i++) {
+        list_li_ingredient.innerHTML = arrayFilterIngredient[i];
+        all_Ing.appendChild(listIngredient);
+      }
+
+      //ajout des appareils au DOM
+      const listAppliance = document.createElement("ul");
+      const list_li_appliance = document.createElement("li");
+      list_li_appliance.className = "list_appliance";
+      listAppliance.appendChild(list_li_appliance);
+      for (let i = 0; i < arrayFiltreAppliance.length; i++) {
+        list_li_appliance.innerHTML = arrayFiltreAppliance[i];
+        all_App.appendChild(listAppliance);
+      }
+
+      //ajout des ustensiles au DOM
+      const listUstensil = document.createElement("ul");
+      const list_li_ustensil = document.createElement("li");
+      list_li_ustensil.className = "list_ustensil";
+      listUstensil.appendChild(list_li_ustensil);
+      for (let i = 0; i < arrayFiltreUstensil.length; i++) {
+        list_li_ustensil.innerHTML = arrayFiltreUstensil[i];
+        all_Ust.appendChild(listUstensil);
+      }
     });
 }
 
