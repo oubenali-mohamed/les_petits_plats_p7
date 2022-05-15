@@ -6,7 +6,7 @@
       "servings": 1,
       "ingredients": [
         {
-          "ingredient": "Lait de coco",
+          "ingredient": "lait de coco",
           "quantity": 400,
           "unit": "ml"
         },
@@ -34,7 +34,7 @@
       "time": 10,
       "description": "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
       "appliance": "Blender",
-      "ustensils": ["cuillère à Soupe", "verres", "presse citron"]
+      "ustensils": ["cuillère à soupe", "verres", "presse citron"]
     },
     {
       "id": 2,
@@ -67,7 +67,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Lait de Coco",
+          "ingredient": "lait de coco",
           "quantity": 100,
           "unit": "ml"
         }
@@ -88,7 +88,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Lait de coco",
+          "ingredient": "lait de coco",
           "quantity": 400,
           "unit": "ml"
         },
@@ -108,7 +108,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Huile d'olive",
+          "ingredient": "huile d'olive",
           "quantity": 1,
           "unit": "cuillères à soupe"
         }
@@ -180,7 +180,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Crème fraiche",
+          "ingredient": "crème fraiche",
           "quantity": 2,
           "unit": "cuillères à soupe"
         },
@@ -221,12 +221,12 @@
           "unit": ""
         },
         {
-          "ingredient": "Crème fraiche",
+          "ingredient": "crème fraiche",
           "quantity": 25,
           "unit": "cl"
         },
         {
-          "ingredient": "Sucre en Poudre",
+          "ingredient": "sucre en poudre",
           "quantity": 100,
           "unit": "grammes"
         },
@@ -262,7 +262,7 @@
           "unit": "cl"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": "30",
           "unit": "grammes"
         },
@@ -293,7 +293,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 120,
           "unit": "grammes"
         },
@@ -303,7 +303,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Sucre en Poudre",
+          "ingredient": "sucre en poudre",
           "quantity": "110",
           "unit": "grammes"
         },
@@ -344,7 +344,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Huile d'olive",
+          "ingredient": "huile d'olive",
           "quantity": "",
           "unit": ""
         },
@@ -355,7 +355,7 @@
         }
       ],
       "time": 15,
-      "description": "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olives à votre gout.",
+      "description": "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamic et l'huile d'olive à votre gout.",
       "appliance": "Saladier",
       "ustensils": ["cuillère en bois", "couteau"]
     },
@@ -393,7 +393,7 @@
       "time": 60,
       "description": "Commencer par cuire les pommes de terre dans l'eau bouillante. Puis epluchez les et coupez les en rondelles. Emincer les oignons puis les faire dorer dans du beurre. Ajouter le jambon fumé coupé en en morceaux ainsi que les pommes de terres. Salez, poivrez à votre gout ( et celui de vos convives ) Laissez cuisiner durant environ 10 minutes puis ajouter le vin blanc. Après 5 minutes, mettre le tout dans un plat à gratin. Coupez le rebelochon, soit en tranches, soit le couper en 2 dans le sens de l'épaisseur et recouvrir les pommes de terre. Cuire au four (environ 220°) durant 25 minutes. C'est prêt !",
       "appliance": "Four",
-      "ustensils": ["plat à gratin", "couteau", "Économe"]
+      "ustensils": ["plat à gratin", "couteau", "économe"]
     },
     {
       "id": 11,
@@ -514,7 +514,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Farine de blé noir",
+          "ingredient": "farine de blé noir",
           "quantity": 130,
           "unit": "grammes"
         },
@@ -534,7 +534,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 75,
           "unit": "grammes"
         }
@@ -555,7 +555,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 250,
           "unit": "grammes"
         },
@@ -565,7 +565,7 @@
           "unit": "ml"
         },
         {
-          "ingredient": "Beurre salé",
+          "ingredient": "beurre salé",
           "quantity": 30,
           "unit": "grammes"
         },
@@ -611,7 +611,7 @@
           "unit": "tiges"
         },
         {
-          "ingredient": "huile d'olives",
+          "ingredient": "huile d'olive",
           "quantity": 2,
           "unit": "cuillère à soupe"
         }
@@ -735,7 +735,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Crème fraiche",
+          "ingredient": "crème fraiche",
           "quantity": 200,
           "unit": "grammes"
         },
@@ -786,15 +786,15 @@
           "unit": "cl"
         },
         {
-          "ingredient": "Crème Fraiche",
+          "ingredient": "crème fraiche",
           "quantity": 1,
           "unit": "cuillères à soupe"
         }
       ],
       "time": 30,
       "description": "Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraiche à la viande hachée. Serivir.",
-      "appliance": "Casserolle.",
-      "ustensils": ["Cuillère en bois", "louche", "couteau"]
+      "appliance": "Casserole",
+      "ustensils": ["cuillère en bois", "louche", "couteau"]
     },
     {
       "id": 22,
@@ -802,7 +802,7 @@
       "servings": 4,
       "ingredients": [
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 160,
           "unit": "grammes"
         },
@@ -812,7 +812,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 50,
           "unit": "grammes"
         },
@@ -848,7 +848,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 30,
           "unit": "grammes"
         },
@@ -858,7 +858,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Crème Fraîche",
+          "ingredient": "crème fraiche",
           "quantity": 20,
           "unit": "cl"
         },
@@ -869,7 +869,7 @@
         }
       ],
       "time": 60,
-      "description": "Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraîche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
+      "description": "Etaler la pate dans un moule et la piquer.Parsemer de beurre. Faire chauffer les lardon dans une poêle. Battre les oeufs en ajoutant la crème fraiche et le lait. Finalement ajouter les lardons, salez poivrez à votre gout. Verser l'ensemble sur la pâte. Cuire environ 50 minutes.",
       "appliance": "Four",
       "ustensils": ["moule à gateaux", "rouleau à patisserie", "fouet"]
     },
@@ -925,12 +925,12 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 100,
           "unit": "grammes"
         },
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 100,
           "unit": "grammes"
         },
@@ -966,7 +966,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Huile d'olives",
+          "ingredient": "huile d'olive",
           "quantity": "",
           "unit": ""
         },
@@ -1002,7 +1002,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Crème fraîche",
+          "ingredient": "crème fraiche",
           "quantity": 4,
           "unit": "cuillère à soupe"
         },
@@ -1012,14 +1012,14 @@
           "unit": "verres"
         },
         {
-          "ingredient": "Beurre salé",
+          "ingredient": "beurre salé",
           "quantity": 50,
           "unit": "grammes"
         }
       ],
       "time": 15,
       "description": "Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
-      "appliance": "Casserolle",
+      "appliance": "Casserole",
       "ustensils": ["couteau", "cuillère en bois"]
     },
     {
@@ -1043,7 +1043,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 50,
           "unit": "grammes"
         },
@@ -1079,7 +1079,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Huile d'olive",
+          "ingredient": "huile d'olive",
           "quantity": "",
           "unit": ""
         },
@@ -1195,7 +1195,7 @@
       "time": 20,
       "description": "Beurrer les tranches de pain, ajouter entre 2 tranches de pain de mie 1 tranche d'émental, une de blanc de dinde, et une autre d'emmental. Dans un récipient, mélanger le gruyère rappé avec le lait et la noix de muscade. Mettre sur les croque monsieux. Placer au four durnat 10 minutes.",
       "appliance": "Four",
-      "ustensils": ["râpe à fromage", "cuillère à Soupe", "couteau"]
+      "ustensils": ["râpe à fromage", "cuillère à soupe", "couteau"]
     },
     {
       "id": 33,
@@ -1244,12 +1244,12 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Crème fraîche",
+          "ingredient": "crème fraiche",
           "quantity": 20,
           "unit": "cl"
         },
         {
-          "ingredient": "Huile d'olive",
+          "ingredient": "huile d'olive",
           "quantity": "",
           "unit": ""
         },
@@ -1280,12 +1280,12 @@
           "unit": ""
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 20,
           "unit": "grammes"
         },
         {
-          "ingredient": "Crème fraîche",
+          "ingredient": "crème fraiche",
           "quantity": 2,
           "unit": "cuillères à soupe"
         },
@@ -1362,7 +1362,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Huile d'olives",
+          "ingredient": "huile d'olive",
           "quantity": 25,
           "unit": "cl"
         },
@@ -1385,7 +1385,7 @@
       "time": 60,
       "description": "Couper les courgettes dans le sens de la longueur. Vider les courgette dans un saladier. Réserver.Faire revenir la chair des courgettes dans 25cl d'huile d'olive. Ajouter l'oignon puis la viande hachée. Mettre la farce dans les courgettes. Ajouter le coulis de tomates. Mettre au four pendant 30 minutes. Avant la fin de la cuisson ajouter le fromage rapé",
       "appliance": "Four",
-      "ustensils": ["couteau", "cuillère en bois", "Poelle à frire"]
+      "ustensils": ["couteau", "cuillère en bois", "poelle à frire"]
     },
     {
       "id": 38,
@@ -1416,7 +1416,7 @@
       "time": 20,
       "description": "Fouettez les oeufs, le sucre et le lait. tremper les tranches de pain. Le cuire au four pendant environ 10 minutes à 180°. Servir",
       "appliance": "Four",
-      "ustensils": ["fouet", "bol", "Cuillère à Soupe"]
+      "ustensils": ["fouet", "bol", "cuillère à soupe"]
     },
     {
       "id": 39,
@@ -1429,12 +1429,12 @@
           "unit": ""
         },
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 100,
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 50,
           "unit": "grammes"
         },
@@ -1465,7 +1465,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Sucre en poudre",
+          "ingredient": "sucre en poudre",
           "quantity": 4,
           "unit": "cuillères à café"
         },
@@ -1503,7 +1503,7 @@
       ],
       "time": 20,
       "description": "Séparer les blancs d'oeufs. Faire fondre le chocolat au bain marie. Ajouter les jaunes et le sucre au chocolat hors du feu. Battre les blancs en neige. Ajouter les blancs au mélange de chocolat. Mélangez délicatement avec une spatule. Servir dans un plat ou dans des verres. Mettre au frais",
-      "appliance": "Casserolle",
+      "appliance": "Casserole",
       "ustensils": ["fouet", "spatule", "verres"]
     },
     {
@@ -1553,7 +1553,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre fondu",
+          "ingredient": "beurre fondu",
           "quantity": 100,
           "unit": "grammes"
         },
@@ -1594,7 +1594,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 50,
           "unit": "grammes"
         },
@@ -1606,7 +1606,7 @@
       ],
       "time": 15,
       "description": "Mélanger la farine et le beurre fondu en ajoutant le lait peu à peu. Ajouter du sucre après la cuisson. Bien mélanger. Ajouter le chocolat en morceaux et laisser chauffer 8 minutes en mélangeant avec une cuillère en bois. Mettre dans des verres",
-      "appliance": "Casserolle",
+      "appliance": "Casserole",
       "ustensils": ["cuillère en bois"]
     },
     {
@@ -1625,7 +1625,7 @@
           "unit": ""
         },
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 30,
           "unit": "grammes"
         },
@@ -1637,7 +1637,7 @@
       ],
       "time": 30,
       "description": "Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les oeufs et le sucre, ajouter la farine puis finalement ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes.",
-      "appliance": "Casserolle",
+      "appliance": "Casserole",
       "ustensils": ["fouet", "saladier"]
     },
     {
@@ -1646,7 +1646,7 @@
       "servings": 6,
       "ingredients": [
         {
-          "ingredient": "Farine",
+          "ingredient": "farine",
           "quantity": 250,
           "unit": "grammes"
         },
@@ -1702,7 +1702,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Crème Fraîche",
+          "ingredient": "crème fraiche",
           "quantity": 20,
           "unit": "cl"
         }
@@ -1805,7 +1805,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Beurre",
+          "ingredient": "beurre",
           "quantity": 500,
           "unit": "grammes"
         },

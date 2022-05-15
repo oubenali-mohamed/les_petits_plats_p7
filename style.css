@@ -82,8 +82,11 @@ body {
   padding-left: 30px;
 }
 .msgRecipe {
-  font-size: 22px;
+  font-size: 18px;
   margin: -40px 0px 50px 50px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 30px;
 }
 .all_recipes {
   display: flex;

@@ -8,6 +8,9 @@ const all_Ust = document.querySelector(".allUst");
 const searchBar = document.querySelector("#search");
 const all_recipes = document.querySelector(".all_recipes");
 const msgRecipe = document.querySelector(".msgRecipe");
+let arrayIngredient = [];
+let arrayAppliance = [];
+let arrayUstensil = [];
 
 async function displayRecipe() {
   fetch(url)
@@ -18,8 +21,9 @@ async function displayRecipe() {
       // récupération des données du fichier json
       // console.log(data.recipes);
       const recipes = data.recipes;
-      // console.log(recipes);
+
       return recipes.forEach((recipe) => {
+        // console.log(recipe);
         const recipeModel = new Recipe(recipe);
         const recipCardDOM = recipeModel.getRecipe();
         all_recipes.appendChild(recipCardDOM);
@@ -30,15 +34,27 @@ async function displayRecipe() {
         const list_li_ingredient = document.createElement("li");
         list_li_ingredient.className = "list_ingredient";
         listIngredient.appendChild(list_li_ingredient);
+
         for (let i = 0; i < all_ingredients.length; i++) {
-          // console.log(all_ingredients);
-          list_li_ingredient.innerHTML = all_ingredients[i].ingredient;
+          arrayIngredient.push(all_ingredients[i].ingredient);
+          // console.log(arrayIngredient);
+          const arrayFilterIngredient = arrayIngredient.filter(
+            (el, pos) => arrayIngredient.indexOf(el) == pos
+          );
+          // console.log(arrayFilterIngredient);
           const allIng = document.querySelector(".allIng");
+          list_li_ingredient.innerHTML = all_ingredients[i].ingredient;
           allIng.append(listIngredient);
         }
 
         // récupération des données pour les appareils
         const all_appliance = recipe.appliance;
+        arrayAppliance.push(all_appliance);
+        arrayAppliance.push(all_appliance);
+        const arrayfiltreAppl = arrayAppliance.filter(
+          (el, pos) => arrayAppliance.indexOf(el) == pos
+        );
+        // console.log(arrayfiltreAppl);
         const listAppliance = document.createElement("ul");
         const list_li_appliance = document.createElement("li");
         list_li_appliance.className = "list_appliance";
@@ -49,12 +65,20 @@ async function displayRecipe() {
 
         // récupération des données des ustensiles
         const all_ustensils = recipe.ustensils;
+
         const listUstensil = document.createElement("ul");
         const list_li_ustensil = document.createElement("li");
         list_li_ustensil.className = "list_ustensil";
         listUstensil.appendChild(list_li_ustensil);
+
         for (let i = 0; i < all_ustensils.length; i++) {
-          // console.log(all_ustensils[i]);
+          arrayUstensil.push(all_ustensils[i]);
+          // console.log(arrayUstensil);
+          arrayUstensil.push(all_ustensils[i]);
+          const arrayFilterUstensil = arrayUstensil.filter(
+            (el, pos) => arrayUstensil.indexOf(el) == pos
+          );
+          // console.log(arrayFilterUstensil);
           const allUst = document.querySelector(".allUst");
           list_li_ustensil.innerHTML = all_ustensils[i];
           allUst.append(listUstensil);
@@ -93,8 +117,11 @@ searchBar.addEventListener("keyup", function (e) {
 function filterRecipe(lettre, element) {
   if (lettre.length < 3) {
     msgRecipe.innerHTML = "Aucune recette ne correspond à votre critère…";
+    msgRecipe.style.color = "#000";
+    msgRecipe.style.width = "auto";
   } else {
     msgRecipe.style.display = "none";
+    msgRecipe.style.color = "#fff";
     for (let i = 0; i < element.length; i++) {
       const listOfIngredient = document.querySelectorAll(".list_ingredient");
       for (let i = 0; i < listOfIngredient.length; i++) {
@@ -108,9 +135,6 @@ function filterRecipe(lettre, element) {
             msgRecipe.style.display = "block";
             msgRecipe.style.backgroundColor = "#3381f7";
             msgRecipe.style.width = "120px";
-            msgRecipe.style.padding = "10px";
-            msgRecipe.style.color = "white";
-            msgRecipe.style.borderRadius = "30px";
           });
         } else {
           element[i].style.display = "none";
@@ -129,9 +153,6 @@ function filterRecipe(lettre, element) {
             msgRecipe.style.display = "block";
             msgRecipe.style.backgroundColor = "#68d9a4";
             msgRecipe.style.width = "120px";
-            msgRecipe.style.padding = "10px";
-            msgRecipe.style.color = "white";
-            msgRecipe.style.borderRadius = "30px";
           });
         } else {
           element[i].style.display = "none";
@@ -150,9 +171,6 @@ function filterRecipe(lettre, element) {
             msgRecipe.style.display = "block";
             msgRecipe.style.backgroundColor = "#ed6454";
             msgRecipe.style.width = "120px";
-            msgRecipe.style.padding = "10px";
-            msgRecipe.style.color = "white";
-            msgRecipe.style.borderRadius = "30px";
           });
         } else {
           element[i].style.display = "none";
