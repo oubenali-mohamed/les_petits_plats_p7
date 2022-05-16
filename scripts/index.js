@@ -58,31 +58,31 @@ async function displayRecipe() {
 
       //ajout des ingredients au DOM
       const listIngredient = document.createElement("ul");
-      const list_li_ingredient = document.createElement("li");
-      list_li_ingredient.className = "list_ingredient";
-      listIngredient.appendChild(list_li_ingredient);
       for (let i = 0; i < arrayFilterIngredient.length; i++) {
+        const list_li_ingredient = document.createElement("li");
         list_li_ingredient.innerHTML = arrayFilterIngredient[i];
+        list_li_ingredient.className = "list_ingredient";
+        listIngredient.appendChild(list_li_ingredient);
         all_Ing.appendChild(listIngredient);
       }
 
       //ajout des appareils au DOM
       const listAppliance = document.createElement("ul");
-      const list_li_appliance = document.createElement("li");
-      list_li_appliance.className = "list_appliance";
-      listAppliance.appendChild(list_li_appliance);
       for (let i = 0; i < arrayFiltreAppliance.length; i++) {
+        const list_li_appliance = document.createElement("li");
+        list_li_appliance.className = "list_appliance";
         list_li_appliance.innerHTML = arrayFiltreAppliance[i];
+        listAppliance.appendChild(list_li_appliance);
         all_App.appendChild(listAppliance);
       }
 
       //ajout des ustensiles au DOM
       const listUstensil = document.createElement("ul");
-      const list_li_ustensil = document.createElement("li");
-      list_li_ustensil.className = "list_ustensil";
-      listUstensil.appendChild(list_li_ustensil);
       for (let i = 0; i < arrayFiltreUstensil.length; i++) {
+        const list_li_ustensil = document.createElement("li");
+        list_li_ustensil.className = "list_ustensil";
         list_li_ustensil.innerHTML = arrayFiltreUstensil[i];
+        listUstensil.appendChild(list_li_ustensil);
         all_Ust.appendChild(listUstensil);
       }
     });
@@ -118,14 +118,19 @@ searchBar.addEventListener("keyup", function (e) {
 function filterRecipe(lettre, element) {
   if (lettre.length < 3) {
     msgRecipe.innerHTML = "Aucune recette ne correspond à votre critère…";
-    msgRecipe.style.color = "#000";
-    msgRecipe.style.width = "auto";
   } else {
     msgRecipe.style.display = "none";
-    msgRecipe.style.color = "#fff";
     for (let i = 0; i < element.length; i++) {
-      const listOfIngredient = document.querySelectorAll(".list_ingredient");
-      for (let i = 0; i < listOfIngredient.length; i++) {
+      if (element[i].textContent.toLowerCase().includes(lettre)) {
+        element[i].style.display = "block";
+      } else {
+        element[i].style.display = "none";
+      }
+    }
+  }
+}
+
+/* for (let i = 0; i < listOfIngredient.length; i++) {
         if (element[i].textContent.toLowerCase().includes(lettre)) {
           element[i].style.display = "block";
           listOfIngredient[i].style.display = "block";
@@ -141,9 +146,9 @@ function filterRecipe(lettre, element) {
           element[i].style.display = "none";
           listOfIngredient[i].style.display = "none";
         }
-      }
-      const listOfAppliance = document.querySelectorAll(".list_appliance");
-      for (let i = 0; i < listOfAppliance.length; i++) {
+      } */
+/*const listOfAppliance = document.querySelectorAll(".list_appliance");
+     for (let i = 0; i < listOfAppliance.length; i++) {
         if (element[i].textContent.toLowerCase().includes(lettre)) {
           element[i].style.display = "block";
           listOfAppliance[i].style.display = "block";
@@ -159,28 +164,26 @@ function filterRecipe(lettre, element) {
           element[i].style.display = "none";
           listOfAppliance[i].style.display = "none";
         }
+      } */
+/* const listOfUstensil = document.querySelectorAll(".list_ustensil");
+    for (let i = 0; i < listOfUstensil.length; i++) {
+      if (element[i].textContent.toLowerCase().includes(lettre)) {
+        element[i].style.display = "block";
+        listOfUstensil[i].style.display = "block";
+        listOfUstensil[i].addEventListener("click", function () {
+          msgRecipe.innerHTML = "";
+          msgRecipe.appendChild(listOfUstensil[i]);
+          all_Ust.style.display = "none";
+          msgRecipe.style.display = "block";
+          msgRecipe.style.backgroundColor = "#ed6454";
+          msgRecipe.style.width = "120px";
+        });
+      } else {
+        element[i].style.display = "none";
+        listOfUstensil[i].style.display = "none";
       }
-      const listOfUstensil = document.querySelectorAll(".list_ustensil");
-      for (let i = 0; i < listOfUstensil.length; i++) {
-        if (element[i].textContent.toLowerCase().includes(lettre)) {
-          element[i].style.display = "block";
-          listOfUstensil[i].style.display = "block";
-          listOfUstensil[i].addEventListener("click", function () {
-            msgRecipe.innerHTML = "";
-            msgRecipe.appendChild(listOfUstensil[i]);
-            all_Ust.style.display = "none";
-            msgRecipe.style.display = "block";
-            msgRecipe.style.backgroundColor = "#ed6454";
-            msgRecipe.style.width = "120px";
-          });
-        } else {
-          element[i].style.display = "none";
-          listOfUstensil[i].style.display = "none";
-        }
-      }
-    }
-  }
-}
+    } */
+
 async function init() {
   displayRecipe();
 }
