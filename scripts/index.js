@@ -61,7 +61,7 @@ async function displayRecipe() {
       for (let i = 0; i < arrayFilterIngredient.length; i++) {
         const list_li_ingredient = document.createElement("li");
         list_li_ingredient.innerHTML = arrayFilterIngredient[i];
-        list_li_ingredient.className = "list_ingredient";
+        list_li_ingredient.className = "list_tag";
         listIngredient.appendChild(list_li_ingredient);
         all_Ing.appendChild(listIngredient);
       }
@@ -70,7 +70,7 @@ async function displayRecipe() {
       const listAppliance = document.createElement("ul");
       for (let i = 0; i < arrayFiltreAppliance.length; i++) {
         const list_li_appliance = document.createElement("li");
-        list_li_appliance.className = "list_appliance";
+        list_li_appliance.className = "list_tag";
         list_li_appliance.innerHTML = arrayFiltreAppliance[i];
         listAppliance.appendChild(list_li_appliance);
         all_App.appendChild(listAppliance);
@@ -80,7 +80,7 @@ async function displayRecipe() {
       const listUstensil = document.createElement("ul");
       for (let i = 0; i < arrayFiltreUstensil.length; i++) {
         const list_li_ustensil = document.createElement("li");
-        list_li_ustensil.className = "list_ustensil";
+        list_li_ustensil.className = "list_tag";
         list_li_ustensil.innerHTML = arrayFiltreUstensil[i];
         listUstensil.appendChild(list_li_ustensil);
         all_Ust.appendChild(listUstensil);
@@ -112,7 +112,9 @@ chevronUst.addEventListener("click", function (e) {
 searchBar.addEventListener("keyup", function (e) {
   const searchLettre = e.target.value;
   const recipeContent = document.querySelectorAll(".recipe_content");
+  const list_tag = document.querySelectorAll(".list_tag");
   filterRecipe(searchLettre, recipeContent);
+  filtreTag(searchLettre, list_tag);
 });
 
 function filterRecipe(lettre, element) {
@@ -130,59 +132,19 @@ function filterRecipe(lettre, element) {
   }
 }
 
-/* for (let i = 0; i < listOfIngredient.length; i++) {
-        if (element[i].textContent.toLowerCase().includes(lettre)) {
-          element[i].style.display = "block";
-          listOfIngredient[i].style.display = "block";
-          listOfIngredient[i].addEventListener("click", function () {
-            msgRecipe.innerHTML = "";
-            msgRecipe.appendChild(listOfIngredient[i]);
-            all_Ing.style.display = "none";
-            msgRecipe.style.display = "block";
-            msgRecipe.style.backgroundColor = "#3381f7";
-            msgRecipe.style.width = "120px";
-          });
-        } else {
-          element[i].style.display = "none";
-          listOfIngredient[i].style.display = "none";
-        }
-      } */
-/*const listOfAppliance = document.querySelectorAll(".list_appliance");
-     for (let i = 0; i < listOfAppliance.length; i++) {
-        if (element[i].textContent.toLowerCase().includes(lettre)) {
-          element[i].style.display = "block";
-          listOfAppliance[i].style.display = "block";
-          listOfAppliance[i].addEventListener("click", function () {
-            msgRecipe.innerHTML = "";
-            msgRecipe.appendChild(listOfAppliance[i]);
-            all_App.style.display = "none";
-            msgRecipe.style.display = "block";
-            msgRecipe.style.backgroundColor = "#68d9a4";
-            msgRecipe.style.width = "120px";
-          });
-        } else {
-          element[i].style.display = "none";
-          listOfAppliance[i].style.display = "none";
-        }
-      } */
-/* const listOfUstensil = document.querySelectorAll(".list_ustensil");
-    for (let i = 0; i < listOfUstensil.length; i++) {
-      if (element[i].textContent.toLowerCase().includes(lettre)) {
-        element[i].style.display = "block";
-        listOfUstensil[i].style.display = "block";
-        listOfUstensil[i].addEventListener("click", function () {
-          msgRecipe.innerHTML = "";
-          msgRecipe.appendChild(listOfUstensil[i]);
-          all_Ust.style.display = "none";
-          msgRecipe.style.display = "block";
-          msgRecipe.style.backgroundColor = "#ed6454";
-          msgRecipe.style.width = "120px";
-        });
-      } else {
-        element[i].style.display = "none";
-        listOfUstensil[i].style.display = "none";
-      }
-    } */
+function filtreTag(lettre, tag) {
+  for (let i = 0; i < tag.length; i++) {
+    if (tag[i].textContent.toLowerCase().includes(lettre)) {
+      tag[i].style.display = "block";
+      tag[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        msgRecipe.innerHTML = tag[i].innerHTML;
+      });
+    } else {
+      tag[i].style.display = "none";
+    }
+  }
+}
 
 async function init() {
   displayRecipe();
