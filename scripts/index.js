@@ -8,6 +8,7 @@ const all_Ust = document.querySelector(".allUst");
 const searchBar = document.querySelector("#search");
 const all_recipes = document.querySelector(".all_recipes");
 const msgRecipe = document.querySelector(".msgRecipe");
+const searchTag = document.querySelectorAll(".tag_filtre");
 let arrayIngredient = [];
 let arrayAppliance = [];
 let arrayUstensil = [];
@@ -144,6 +145,17 @@ function filtreTag(lettre, tag) {
       tag[i].style.display = "none";
     }
   }
+}
+// filtre des recettes dans les champs de saisie
+for (let i = 0; i < searchTag.length; i++) {
+  searchTag[i].addEventListener("keyup", function (e) {
+    e.preventDefault();
+    const searchLettre = e.target.value;
+    const list_tag = document.querySelectorAll(".list_tag");
+    const recipeContent = document.querySelectorAll(".recipe_content");
+    filtreTag(searchLettre, list_tag);
+    filterRecipe(searchLettre, recipeContent);
+  });
 }
 
 async function init() {

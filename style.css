@@ -47,6 +47,11 @@ body {
 .one_filtre li {
   cursor: pointer;
 }
+.tag_filtre {
+  height: 70px;
+  width: 200px;
+  margin-left: 25px;
+}
 .chevronIng,
 .chevronApp,
 .chevronUst {
