@@ -46,7 +46,6 @@ async function displayRecipe() {
       const arrayFilterIngredient = arrayIngredient.filter(
         (el, pos) => arrayIngredient.indexOf(el) == pos
       );
-
       // filtre des appareils
       const arrayFiltreAppliance = arrayAppliance.filter(
         (el, pos) => arrayAppliance.indexOf(el) == pos
@@ -86,6 +85,66 @@ async function displayRecipe() {
         listUstensil.appendChild(list_li_ustensil);
         all_Ust.appendChild(listUstensil);
       }
+
+      // On écoute l'évenement Keyup sur la barre de recherhe principale pour appliquer les fonction de trie
+      searchBar.addEventListener("keyup", function (e) {
+        e.preventDefault();
+        const searchLettre = e.target.value;
+        filterRecipe(searchLettre, recipes);
+      });
+      // function pour filtrer les recettes
+      function filterRecipe(lettre, element) {
+        if (lettre.length < 3) {
+          msgRecipe.innerHTML = "Aucune recette ne correspond à votre critère…";
+        } else {
+          msgRecipe.innerHTML = "";
+          for (let i = 0; i < element.length; i++) {
+            if (element[i].name.toLowerCase().includes(lettre)) {
+              const recipeContent =
+                document.querySelectorAll(".recipe_content");
+              recipeContent[i].style.display = "block";
+              const ingredients_recipe = element[i].ingredients;
+              for (let i = 0; i < ingredients_recipe.length; i++) {
+                console.log(ingredients_recipe[i].ingredient);
+                const addUlTag = document.createElement("ul");
+                const addLiTag = document.createElement("li");
+                addUlTag.appendChild(addLiTag);
+                addLiTag.innerHTML = ingredients_recipe[i].ingredient;
+                all_Ing.appendChild(addUlTag);
+              }
+            } else {
+              const recipeContent =
+                document.querySelectorAll(".recipe_content");
+              recipeContent[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+      //  On écoute l'évenement Keyup sur les champs de saisie pour appliquer les fonction de trie
+      for (let i = 0; i < searchTag.length; i++) {
+        searchTag[i].addEventListener("keyup", function (e) {
+          e.preventDefault();
+          const searchLettre = e.target.value;
+          const list_tag = document.querySelectorAll(".list_tag");
+          filtreTag(searchLettre, list_tag);
+        });
+      }
+      //function pour filtrer des tags
+      function filtreTag(letter, tag) {
+        for (let i = 0; i < tag.length; i++) {
+          if (tag[i].textContent.toLowerCase().includes(letter)) {
+            tag[i].style.display = "block";
+            tag[i].addEventListener("click", function (e) {
+              e.preventDefault();
+              msgRecipe.className = "addTag";
+              msgRecipe.innerHTML = tag[i].innerHTML;
+            });
+          } else {
+            tag[i].style.display = "none";
+          }
+        }
+      }
     });
 }
 
@@ -107,56 +166,6 @@ chevronUst.addEventListener("click", function (e) {
   chevronUst.style.transform = "rotate(180deg)";
   all_Ust.style.display = "block";
 });
-
-// fonction permettant de trier les recettes en fonction de l'entrée dans le champ de recherche
-
-searchBar.addEventListener("keyup", function (e) {
-  const searchLettre = e.target.value;
-  const recipeContent = document.querySelectorAll(".recipe_content");
-  const list_tag = document.querySelectorAll(".list_tag");
-  filterRecipe(searchLettre, recipeContent);
-  filtreTag(searchLettre, list_tag);
-});
-
-function filterRecipe(lettre, element) {
-  if (lettre.length < 3) {
-    msgRecipe.innerHTML = "Aucune recette ne correspond à votre critère…";
-  } else {
-    msgRecipe.style.display = "none";
-    for (let i = 0; i < element.length; i++) {
-      if (element[i].textContent.toLowerCase().includes(lettre)) {
-        element[i].style.display = "block";
-      } else {
-        element[i].style.display = "none";
-      }
-    }
-  }
-}
-
-function filtreTag(lettre, tag) {
-  for (let i = 0; i < tag.length; i++) {
-    if (tag[i].textContent.toLowerCase().includes(lettre)) {
-      tag[i].style.display = "block";
-      tag[i].addEventListener("click", function (e) {
-        e.preventDefault();
-        msgRecipe.innerHTML = tag[i].innerHTML;
-      });
-    } else {
-      tag[i].style.display = "none";
-    }
-  }
-}
-// filtre des recettes dans les champs de saisie
-for (let i = 0; i < searchTag.length; i++) {
-  searchTag[i].addEventListener("keyup", function (e) {
-    e.preventDefault();
-    const searchLettre = e.target.value;
-    const list_tag = document.querySelectorAll(".list_tag");
-    const recipeContent = document.querySelectorAll(".recipe_content");
-    filtreTag(searchLettre, list_tag);
-    filterRecipe(searchLettre, recipeContent);
-  });
-}
 
 async function init() {
   displayRecipe();
