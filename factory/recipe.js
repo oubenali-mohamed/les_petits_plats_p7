@@ -1,6 +1,7 @@
 class Recipe {
   constructor(data) {
     this.name = data.name;
+    this.image = data.image;
     this.id = data.id;
     this.description = data.description;
     this.ingredients = data.ingredients;
@@ -16,6 +17,7 @@ class Recipe {
 
     const imgRecipe = document.createElement("div");
     imgRecipe.className = "bg_img";
+    imgRecipe.style.backgroundImage = `url(images/${this.image})`;
     recipeContent.appendChild(imgRecipe);
 
     const infos_recipe = document.createElement("div");

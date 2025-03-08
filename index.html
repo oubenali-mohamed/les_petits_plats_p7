@@ -13,25 +13,35 @@
   </head>
   <body>
     <div class="bloc_page">
-      <header>
-        <a href="index.html">
-          <img src="images/logo.png" alt="logo les Petits Plats" class="logo"
-        /></a>
-      </header>
-      <main class="main">
+      <div class="bloc_search">
+        <header>
+          <a href="index.html">
+            <img src="images/logo.png" alt="logo les Petits Plats" class="logo"
+          /></a>
+        </header>
         <div class="search_bar">
+          <p class="title">
+            CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET
+            DÉLICIEUSES
+          </p>
           <div>
             <label for="search"></label>
             <input
               type="text"
               id="search"
               name="search"
-              placeholder="Rechercher une recette"
+              placeholder="Rechercher une recette, un ingrdients..."
             />
-            <i class="fas fa-search iconeSearch"></i>
+            <i class=" fas fa-search iconeSearch"></i>
           </div>
-          <p class="msgRecipe"></p>
+          <div class="noFound">
+            <p class="msgRecipe"></p>
+            <i class="far fa-times-circle close"></i>
+          </div>
         </div>
+      </div>
+
+      <main class="main">
         <div class="search_filtre">
           <div class="one_filtre">
             <div>
