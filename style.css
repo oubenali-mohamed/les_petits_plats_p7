@@ -19,25 +19,21 @@ body {
 }
 .title {
   color: #ffd15b;
-  width: 890;
-  height: 132;
-  margin-top: 245px;
-  margin-left: 205px;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
   font-size: 44px;
-  font-family: Anton;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0%;
   text-align: center;
 }
 .iconeSearch {
-  margin-left: -40px;
+  margin-left: -150px;
 }
 #search {
   border-radius: 5px;
   height: 60px;
-  width: 90%;
-  margin-left: 50px;
+  width: 70%;
+  margin-left: 200px;
+  margin-right: 100px;
   border: none;
   margin-bottom: 60px;
 }
@@ -45,6 +41,9 @@ body {
   font-size: 20px;
   padding-left: 30px;
   color: gray;
+}
+.main {
+  background-color: #e5e5e5;
 }
 .search_filtre {
   display: flex;
@@ -59,47 +58,33 @@ body {
   flex-direction: column;
   position: relative;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 100px;
+  margin-top: 40px;
 }
-.one_filtre li {
-  cursor: pointer;
-}
+
 .tag_filtre {
-  height: 70px;
+  height: 50px;
   width: 200px;
   margin-left: 25px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
 }
 .chevronIng,
 .chevronApp,
 .chevronUst {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   border: none;
   background: none;
   cursor: pointer;
-  color: white;
-}
-#ustensiles {
-  background-color: #ed6454;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
-}
-#appareil {
-  background-color: #68d9a4;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
-}
-#ingredients {
-  background-color: #3381f7;
-  border-radius: 5px;
-  border: none;
-  width: 200px;
+  color: black;
+  font-size: 20px;
 }
 ::placeholder {
-  color: white;
+  color: black;
   font-size: 20px;
   padding-left: 30px;
 }
@@ -183,7 +168,7 @@ li {
 .info_recipe {
   display: flex;
   flex-direction: column;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
   height: auto;
   border-radius: 0px 0px 5px 5px;
   padding: 20px;
@@ -233,15 +218,20 @@ li {
   justify-content: space-around;
 }
 .time {
-  margin-top: 20px;
+  position: relative;
+  left: 30px;
+  bottom: 200px;
+  width: 60px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #FFD15B;
 }
 .title_name {
   font-size: 16px;
 }
-.clock_time {
-  margin-top: 20px;
-  margin-left: 10px;
-}
+
 @media all and (min-width: 481px) and (max-width: 1200px) {
   .search_filtre {
     display: flex;

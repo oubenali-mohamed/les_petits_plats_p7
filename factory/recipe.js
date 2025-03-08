@@ -32,9 +32,6 @@ class Recipe {
     title_time.appendChild(title_recipe);
 
     const time_recipe = document.createElement("span");
-    const clock_time = document.createElement("i");
-    clock_time.className = "far fa-clock clock_time";
-    title_time.appendChild(clock_time);
     time_recipe.className = "time";
     time_recipe.textContent = this.time + " min";
     title_time.appendChild(time_recipe);
