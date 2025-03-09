@@ -70,8 +70,33 @@ function populateFilters(array, container, type) {
     list.appendChild(listItem)
   })
   container.appendChild(list)
-}
 
+  const inputField = document.querySelector(`#${type}`)
+  inputField.addEventListener('input', (e) =>
+    filterList(e, container, array, type)
+  )
+}
+function filterList(event, container, array, type) {
+  const filterText = event.target.value.toLowerCase()
+  const filteredArray = array.filter((item) =>
+    item.toLowerCase().includes(filterText)
+  )
+
+  // Vider la liste existante
+  container.innerHTML = ''
+
+  // Repeupler la liste avec les éléments filtrés
+  const list = document.createElement('ul')
+  filteredArray.forEach((item) => {
+    const listItem = document.createElement('li')
+    listItem.textContent = item
+    listItem.className = `list_tag${type}`
+    listItem.addEventListener('click', () => addTag(item, type))
+    list.appendChild(listItem)
+  })
+
+  container.appendChild(list)
+}
 // Ajouter un tag sélectionné
 function addTag(tag, type) {
   if (!filters[type].has(tag)) {
@@ -132,7 +157,7 @@ function displayRecipes(recipes) {
     noFound.classList.add('show-close')
   } else {
     msgRecipe.innerHTML = ''
-    noFound.classList.remove('show-close');
+    noFound.classList.remove('show-close')
   }
 
   recipes.forEach((recipe) => {
